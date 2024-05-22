@@ -18,7 +18,8 @@
     "prewatch": "npx rimraf assets/js/dist",
     "watch": "npx rollup -c --bundleConfigAsCjs -w",
     "test": "npx stylelint _sass/**/*.scss",
-    "fixlint": "npm run test -- --fix"
+    "fixlint": "npm run test -- --fix",
+    "start": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
@@ -32,6 +33,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-conventionalcommits": "^7.0.2",
+    "cross-env": "^7.0.3",
     "husky": "^9.0.11",
     "rimraf": "^5.0.5",
     "rollup": "^4.13.2",
@@ -165,5 +167,8 @@
       ],
       "@semantic-release/github"
     ]
+  },
+  "dependencies": {
+    "build": "^0.1.4"
   }
 }
